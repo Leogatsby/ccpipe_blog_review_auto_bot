@@ -8,7 +8,7 @@
 
 | 순서 | 에이전트 | 역할 | 데이터파일 생성 흐름 |
 |------|----------|------|-------------|
-| 00 | SystemSetter | 노션 DB(키워드산업, 지역키워드)를 CSV로 갱신 | `.claude/commonData/00.초기노션DB시스템세팅/` (산업키워드.csv, 지역키워드.csv 갱신) |
+| 00 | SystemSetter | 노션 DB(키워드산업, 지역키워드)를 CSV로 갱신 | `.claude/agents/00.SystemSetter/00.초기노션DB시스템세팅/` (산업키워드.csv, 지역키워드.csv 갱신) |
 | 01 | Researcher | 네이버 API로 키워드 적절성 검증 + 키워드 전략 수립 | 네이버 API 검증 → `에이전트프로세스보고/01.Researcher/` |
 | 02 | Planner | **뼈대 설계**: 도입부/중간부/마무리부 구조, 키워드 배치, 사진 위치, 해시태그 | 글 뼈대 설계 → `에이전트프로세스보고/02.Planner/` |
 | 03 | Writer | **살 붙이기**: Planner 뼈대에 체험 후기 문체로 본문 작성 | 블로그 초안 작성 → `에이전트프로세스보고/03.Writer/` |
@@ -20,7 +20,7 @@
 폴더명 형식: `날짜_지역구_산업업종_산업업종키워드_협찬`
 최종 글 파일명: 블로그 제목 그대로 `.md`로 저장
 
-- 지역구, 산업업종, 산업업종키워드는 `.claude/commonData/00.초기노션DB시스템세팅/지역키워드.csv`, `.claude/commonData/00.초기노션DB시스템세팅/산업키워드.csv`에서 가져온다
+- 지역구, 산업업종, 산업업종키워드는 `.claude/agents/00.SystemSetter/00.초기노션DB시스템세팅/지역키워드.csv`, `.claude/agents/00.SystemSetter/00.초기노션DB시스템세팅/산업키워드.csv`에서 가져온다
 
 ```
 최종결과물/
@@ -37,5 +37,5 @@
 ## 설정
 - API 인증 정보: `.claude/commonData/API설정.md`
 - MCP 서버 설정: `.claude/commonData/settings.json`
-- 노션 동기화 데이터: `.claude/commonData/00.초기노션DB시스템세팅/산업키워드.csv`, `.claude/commonData/00.초기노션DB시스템세팅/지역키워드.csv`
+- 노션 동기화 데이터: `.claude/agents/00.SystemSetter/00.초기노션DB시스템세팅/산업키워드.csv`, `.claude/agents/00.SystemSetter/00.초기노션DB시스템세팅/지역키워드.csv`
 - 기본 업체 정보: `.claude/commonData/기본나의업체정보/업체정보.md`
